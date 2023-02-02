@@ -11,9 +11,10 @@ const app = express(); // Guardar modulo importado en la constante app
 // cors es un middleware que nos permite controlar el acceso a los recursos de un servidor
 // origin es la url de donde se va a consumir el servidor
 // cors() por defecto permite el acceso a todos los recursos
-app.use(cors({
-    origin: "http://localhost:5173"
-}));
+//app.use(cors({
+//    origin: "http://localhost:5173"
+//}));
+app.use(cors());
 
 app.use(express.json()); // (ANTES QUE LLEGUEN A LAS RUTAS PROCESAR LOS DATOS DEL CLIENTES
 
