@@ -8,6 +8,6 @@ export const pool = createPool({
   host: "localhost", // -p en el terminal para ver el puerto de mysql
   port: 33060,
   user: "root",
-  password: "123123",
+  password: "1231231",
   database: "taskdb",
 });
