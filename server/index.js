@@ -1,10 +1,10 @@
 import express from "express"; // "type": "module", in package.json. Para poder importar modulos
-import { PORT } from "./config.js"; // Importar modulo config.js, con extension por que lo cree yo
+import { PORT } from "./config"; // Importar modulo config.js, con extension por que lo cree yo
 import cors from "cors";
 
 
-import indexRoutes from "./routes/index.routes.js"; // Importar modulo index.routes.js, con extension por que lo cree yo
-import taskRoutes from "./routes/tasks.routes.js"; // Importo todo con el nombre taskRoutes
+import indexRoutes from "./routes/index.routes"; // Importar modulo index.routes.js, con extension por que lo cree yo
+import taskRoutes from "./routes/tasks.routes"; // Importo todo con el nombre taskRoutes
 
 const app = express(); // Guardar modulo importado en la constante app
 

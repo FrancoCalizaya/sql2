@@ -1,4 +1,4 @@
-import { pool } from "../db.js";
+import { pool } from "../db";
 
 export const getTasks = async (req, res) => {
   try {

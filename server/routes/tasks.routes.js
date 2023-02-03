@@ -7,7 +7,7 @@ import {
   createTask,
   updateTask,
   deleteTask,
-} from "../controllers/tasks.controllers.js";
+} from "../controllers/tasks.controllers";
 
 // get para obtener datos
 // post enviar datos
