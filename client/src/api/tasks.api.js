@@ -1,4 +1,5 @@
-import axios from "axios";
+const axios = require("axios");
+//import axios from "axios";
 
 const API = import.meta.env.VITE_APP_API_PORT;
 const PORT = import.meta.env.VITE_APP_API_PORT_NUMBER;

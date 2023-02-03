@@ -1,10 +1,13 @@
-import express from "express"; // "type": "module", in package.json. Para poder importar modulos
-import { PORT } from "./config"; // Importar modulo config.js, con extension por que lo cree yo
-import cors from "cors";
+//import express from "express"; // "type": "module", in package.json. Para poder importar modulos
+const express = require("express");
+//import { PORT } from "./config"; // Importar modulo config.js, con extension por que lo cree yo
+const cors = require("cors");
+//import cors from "cors";
 
-
-import indexRoutes from "./routes/index.routes"; // Importar modulo index.routes.js, con extension por que lo cree yo
-import taskRoutes from "./routes/tasks.routes"; // Importo todo con el nombre taskRoutes
+const indexRoutes = require("./routes/index.routes");
+const taskRoutes = require("./routes/tasks.routes");
+//import indexRoutes from "./routes/index.routes"; // Importar modulo index.routes.js, con extension por que lo cree yo
+//import taskRoutes from "./routes/tasks.routes"; // Importo todo con el nombre taskRoutes
 
 const app = express(); // Guardar modulo importado en la constante app
 
@@ -21,8 +24,8 @@ app.use(express.json()); // (ANTES QUE LLEGUEN A LAS RUTAS PROCESAR LOS DATOS DE
 app.use(indexRoutes); // Usar modulo index.routes.js
 app.use(taskRoutes); // Las rutas me devuelven los mensajes
 
-const PORTED = process.env.PORT || PORT
+const PORTED = process.env.PORT || 4000
 
 app.listen(PORTED); // Escuchar o ejecutar en el puerto 3000
 
-console.log(`Server is listening on port: ${PORT}`); // Imprimir en consola
+console.log(`Server is listening on port: ${PORTED}`); // Imprimir en consola

@@ -1,5 +1,6 @@
-import { Router } from "express";
-import { pool } from "../db";
+const { Router } = require("express");
+const { pool } = require("../db");
+//import { pool } from "../db";
 
 const router = Router();
 
@@ -12,4 +13,5 @@ router.get("/ping", async (req, res) => {
 });
 
 
-export default router;
+//export default router;
+module.exports = router;

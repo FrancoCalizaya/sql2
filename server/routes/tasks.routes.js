@@ -1,13 +1,13 @@
-import { Router } from "express"; // Para poder usar el metodo Router de express
-
+//import { Router } from "express"; // Para poder usar el metodo Router de express
+const { Router } = require("express"); // Para poder usar el metodo Router de express
 const router = Router(); // Guardar el metodo Router en la constante router
-import {
+const {
   getTasks,
   getTask,
   createTask,
   updateTask,
   deleteTask,
-} from "../controllers/tasks.controllers";
+} = require ("../controllers/tasks.controllers");
 
 // get para obtener datos
 // post enviar datos
@@ -24,4 +24,5 @@ router.put("/tasks/:id", updateTask);
 
 router.delete("/tasks/:id", deleteTask);
 
-export default router; // Exportar el modulo router
+//export default router; // Exportar el modulo router
+module.exports = router; // Exportar el modulo router
