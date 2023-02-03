@@ -1,5 +1,6 @@
 //import express from "express"; // "type": "module", in package.json. Para poder importar modulos
 require("dotenv").config();
+const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
 const express = require("express");
 //import { PORT } from "./config"; // Importar modulo config.js, con extension por que lo cree yo
 const cors = require("cors");
@@ -30,3 +31,4 @@ const PORTED = process.env.PORT || 4000
 app.listen(PORTED); // Escuchar o ejecutar en el puerto 3000
 
 console.log(`Server is listening on port: ${PORTED}`); // Imprimir en consola
+console.log('DB config ', DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT); // Imprimir en consola
