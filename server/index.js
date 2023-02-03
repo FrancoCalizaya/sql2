@@ -1,4 +1,5 @@
 //import express from "express"; // "type": "module", in package.json. Para poder importar modulos
+require("dotenv").config();
 const express = require("express");
 //import { PORT } from "./config"; // Importar modulo config.js, con extension por que lo cree yo
 const cors = require("cors");
