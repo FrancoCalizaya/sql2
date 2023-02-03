@@ -5,7 +5,8 @@ const getTasks = async (req, res) => {
     const [result] = await pool.query("SELECT * FROM data ORDER BY id ASC");
     res.json(result);
   } catch (error) {
-    return res.status(500).json({ messaje: error.message });
+    console.log(error)
+    return res.status(500).json({ messaje: "Something went wrong..Service unavaliable" });
   }
 };
 
@@ -23,7 +24,8 @@ const getTask = async (req, res) => {
       res.send(result[0]);
     }
   } catch (error) {
-    return res.status(500).json({ messaje: error.message });
+    console.log(error);
+    return res.status(500).json({ messaje: "Something went wrong..Service unavaliable" });
   }
 };
 
@@ -44,7 +46,7 @@ const createTask = async (req, res) => {
       url,
     });
   } catch (error) {
-    return res.status(500).json({ messaje: error.message });
+    return res.status(500).json({ messaje: "Something went wrong..Service unavaliable" });
   }
 };
 
@@ -60,7 +62,7 @@ const updateTask = async (req, res) => {
       res.json(result);
     }
   } catch (error) {
-    return res.status(500).json({ messaje: error.message });
+    return res.status(500).json({ messaje: "Something went wrong..Service unavaliable" });
   }
 };
 
